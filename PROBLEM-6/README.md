@@ -14,7 +14,8 @@ Update a user's score after an action is completed.
 {
   "userId": "user123",
   "score": 100
-}```
+}
+```
 
 userId (string, required): The unique identifier of the user.
 score (number, required): The score increment for the completed action.
