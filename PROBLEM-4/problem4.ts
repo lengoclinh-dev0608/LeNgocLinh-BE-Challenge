@@ -24,9 +24,3 @@ function sum_to_n_closed(n: number): number {
     return (n * (n + 1)) / 2;
 }
 
-sum_to_n_iterative(9)
-console.log("🚀 ~ sum_to_n_iterative(9):", sum_to_n_iterative(9))
-sum_to_n_recursive(9)
-console.log("🚀 ~ sum_to_n_recursive(9):", sum_to_n_recursive(9))
-sum_to_n_closed(9)
-console.log("🚀 ~ sum_to_n_closed(9):", sum_to_n_closed(9))
