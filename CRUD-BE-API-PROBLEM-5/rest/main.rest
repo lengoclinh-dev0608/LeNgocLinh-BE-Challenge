@@ -1,0 +1,46 @@
+# Healthcheck - GET
+GET http://localhost:1337/healthcheck
+
+# Healthcheck - POST
+POST http://localhost:1337/healthcheck
+Content-Type: application/json
+
+{
+    "name": "test",
+    "email": "test@example.com"
+}
+
+# Get Resources
+GET http://localhost:1337/resource
+
+# Create Resource
+POST http://localhost:1337/resource
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john@example.com"
+}
+
+# Get Details of a Resource
+GET http://localhost:1337/resource/1
+
+# Update Resource
+PUT http://localhost:1337/resource/1
+Content-Type: application/json
+
+{
+    "name": "Updated Name",
+    "email": "updated@example.com"
+}
+
+# Patch Resource
+PATCH http://localhost:1337/resource/1
+Content-Type: application/json
+
+{
+    "email": "updated@example.com"
+}
+
+# Delete Resource
+DELETE http://localhost:1337/resource/1
