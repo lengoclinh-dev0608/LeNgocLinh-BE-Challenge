@@ -2,6 +2,7 @@ markdownCopy code# Score Board API Module
 
 This module is responsible for handling score updates and providing real-time updates for the top 10 scores on the leaderboard of the website.
 
+```json
 ## API Endpoints
 
 ### `POST /api/score`
@@ -9,11 +10,11 @@ This module is responsible for handling score updates and providing real-time up
 Update a user's score after an action is completed.
 
 **Request Body**
-```json
+
 {
   "userId": "user123",
   "score": 100
-}
+}```
 
 userId (string, required): The unique identifier of the user.
 score (number, required): The score increment for the completed action.
@@ -26,6 +27,7 @@ Body: Empty
 GET /api/leaderboard
 Retrieve the top 10 scores for the leaderboard.
 Response
+```json
 jsonCopy code[
   {
     "userId": "user123",
@@ -37,6 +39,7 @@ jsonCopy code[
   },
   ...
 ]
+```
 
 Status: 200 OK
 Body: An array of user objects, sorted by score in descending order, with a maximum of 10 entries.
@@ -58,7 +61,7 @@ Input Validation: Validate and sanitize the request body to prevent injection at
 Logging and Monitoring: Implement logging and monitoring mechanisms to track and detect potential abuse or anomalies in score update requests.
 
 Execution Flow Diagram
-![Flow Diagram]('./flow.png')
+![plot]('https://github.com/lengoclinh-dev0608/LeNgocLinh-BE-Challenge/blob/main/PROBLEM-6/flow.png')
 
 The user completes an action on the frontend.
 The frontend sends a score update request to the POST /api/score endpoint.
