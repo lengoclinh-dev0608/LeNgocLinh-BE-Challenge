@@ -61,7 +61,7 @@ Input Validation: Validate and sanitize the request body to prevent injection at
 Logging and Monitoring: Implement logging and monitoring mechanisms to track and detect potential abuse or anomalies in score update requests.
 
 Execution Flow Diagram
-![plot]('https://github.com/lengoclinh-dev0608/LeNgocLinh-BE-Challenge/blob/main/PROBLEM-6/flow.png')
+![plot](https://github.com/lengoclinh-dev0608/LeNgocLinh-BE-Challenge/blob/main/PROBLEM-6/flow.png?raw=true)
 
 The user completes an action on the frontend.
 The frontend sends a score update request to the POST /api/score endpoint.
