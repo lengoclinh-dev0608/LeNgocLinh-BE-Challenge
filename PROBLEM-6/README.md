@@ -47,20 +47,20 @@ Body: An array of user objects, sorted by score in descending order, with a maxi
 
 Real-time Leaderboard Updates\
 The leaderboard should be updated in real-time whenever a user's score changes. This can be achieved using technologies like WebSockets or Server-Sent\
-\Events (SSE).\
+Events (SSE).\
 
 WebSocket Connection: Establish a persistent WebSocket connection between the frontend and the backend server.\
 Score Update Events: When a user's score is updated, the Score Service should broadcast a score update event through the WebSocket connection to all connected frontends.\
-Frontend Updates: The frontend should listen for score update events and update the leaderboard in real-time based on the received data.\
+Frontend Updates: The frontend should listen for score update events and update the leaderboard in real-time based on the received data.
 
 Security Considerations\
-To prevent malicious score updates, the following measures should be implemented:\
+To prevent malicious score updates, the following measures should be implemented:
 
 Authentication: Ensure that the POST /api/score endpoint is only accessible to authenticated users. Implement an authentication mechanism such as JSON Web Tokens (JWT) or API keys.\
 Authorization: Verify that the user making the score update request is authorized to update their own score. This can be achieved by cross-checking the userId in the request body with the authenticated user's identity.\
 Rate Limiting: Implement rate limiting to prevent users from making an excessive number of score update requests within a certain time frame.
 Input Validation: Validate and sanitize the request body to prevent injection attacks or other malicious input.\
-Logging and Monitoring: Implement logging and monitoring mechanisms to track and detect potential abuse or anomalies in score update requests.\
+Logging and Monitoring: Implement logging and monitoring mechanisms to track and detect potential abuse or anomalies in score update requests.
 
 Execution Flow Diagram\
 ![plot](https://github.com/lengoclinh-dev0608/LeNgocLinh-BE-Challenge/blob/main/PROBLEM-6/flow.png?raw=true)
@@ -71,7 +71,7 @@ The API Gateway authenticates the request.\
 The Authorization Service authorizes the request by verifying the user's identity.\
 The Score Service updates the user's score in the storage.\
 The Score Service broadcasts a score update event to the WebSocket Server.\
-The WebSocket Server pushes the real-time score update to all connected frontends.\
+The WebSocket Server pushes the real-time score update to all connected frontends.
 
 Additional Comments and Improvements\
 
@@ -83,11 +83,11 @@ Error Handling: Implement proper error handling and logging mechanisms to aid in
 Documentation: Provide comprehensive documentation for the API endpoints, WebSocket events, request/response formats, error codes, and usage examples.\
 Testing: Implement unit tests, integration tests, and end-to-end tests to ensure the correctness and reliability of the system.\
 Monitoring and Alerting: Set up monitoring and alerting mechanisms to track the health and performance of the system, and be notified of any issues or anomalies.\
-Security Hardening: Continuously review and implement security best practices, such as secure communication (HTTPS), input validation, and protection against common web vulnerabilities (e.g., XSS, CSRF, SQL injection).\
+Security Hardening: Continuously review and implement security best practices, such as secure communication (HTTPS), input validation, and protection against common web vulnerabilities (e.g., XSS, CSRF, SQL injection).
 
-Please note that this specification is a high-level overview, and further refinement and implementation details may be required based on the specific requirements and constraints of the project.\
+Please note that this specification is a high-level overview, and further refinement and implementation details may be required based on the specific requirements and constraints of the project.
 
-I've made the following changes to include real-time leaderboard updates:\
+I've made the following changes to include real-time leaderboard updates:
 
 1. Added a "Real-time Leaderboard Updates" section that describes the use of WebSockets or Server-Sent Events (SSE) for real-time updates.
 2. Updated the execution flow diagram to include a "WebSocket Server" component that broadcasts score update events to connected frontends.
